@@ -1,0 +1,304 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-family: "Ubuntu", sans-serif;
+  box-sizing: border-box;
+}
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  padding: 30px;
+  z-index: 999;
+  display: flex;
+  justify-content: space-between;
+  transition: 0.3s linear;
+}
+
+.navbar a {
+  color: white;
+  font-weight: 600;
+  margin-left: 15px;
+  transition: 0.3s linear;
+}
+
+.navbar-menu a:hover {
+  color: dodgerblue;
+  transition: 0.3s linear;
+}
+
+.navbar-scroll {
+  background-color: #fff;
+  padding: 30px;
+}
+
+.navbar-scroll a {
+  color: black;
+}
+
+.menu__toggler {
+  background: none;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  z-index: 999;
+  border: none;
+  width: 25px;
+  display: none;
+}
+
+.menu__toggler span {
+  display: block;
+  background-color: white;
+  height: 3px;
+  width: 100%;
+  margin-bottom: 6px;
+}
+
+#Home {
+  background: url(./images/homebg.jpg) no-repeat center;
+  height: 100vh;
+  min-height: 500px;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inner-width {
+  text-align: center;
+}
+
+.inner-width h1 {
+  color: white;
+  margin-bottom: 60px;
+  font-size: 3rem;
+}
+
+.inner-width h1::after {
+  content: " Sangwon";
+  animation: contentanim 10s infinite;
+}
+
+@keyframes contentanim {
+  25% {
+    content: " Developer";
+  }
+  50% {
+    content: " Student";
+  }
+  75% {
+    content: " Youtuber";
+  }
+}
+
+.my-sm i {
+  color: white;
+  font-size: 22px;
+  margin: 0 30px;
+  margin-bottom: 60px;
+  cursor: pointer;
+}
+.my-sm i:hover {
+  color: dodgerblue;
+  transition: 0.3s linear;
+}
+
+.inner-width .buttons a {
+  display: inline-block;
+  color: #48dbfb;
+  border: 1px solid #48dbfb;
+  padding: 20px;
+  margin: 0 15px;
+}
+
+.inner-width .buttons a:hover,
+.inner-width .buttons a:nth-child(2) {
+  background-color: #48dbfb;
+  color: white;
+}
+
+.about-inner {
+  padding: 100px 20px;
+  background-color: #ecf0f1;
+}
+.about-inner .section-title h1 {
+  text-align: center;
+  font-size: 28px;
+  position: relative;
+  color: #111;
+  padding-bottom: 20px;
+  margin-bottom: 30px;
+}
+
+.about-inner .section-title h1::before {
+  content: "";
+  width: 100px;
+  height: 3px;
+  background-color: #2f2f2f;
+  position: absolute;
+  bottom: 0;
+  left: calc(50% - 50px);
+}
+
+.about-inner .section-title h1::after {
+  content: "";
+  width: 12px;
+  height: 7px;
+  background-color: #48dbfb;
+  border: 2px solid #fff;
+  position: absolute;
+  bottom: -4px;
+  left: calc(50% - 5px);
+}
+.about-content img {
+  border-radius: 66px;
+  margin: 0 auto;
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.about-content .about-text {
+  flex: 1;
+  margin-left: 10px;
+}
+
+.about-text h3 {
+  margin: 10px 0;
+  font-size: 16px;
+  color: #444;
+}
+.about-text h3 span:nth-child(2)::before,
+.about-text h3 span:nth-child(3)::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  background-color: #444;
+  display: inline-block;
+  border-radius: 50%;
+  margin: 0 10px;
+}
+
+.about-text p {
+  text-align: justify;
+  line-height: 25px;
+  font-size: 16px;
+}
+
+.skills {
+  margin-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.skills .skill {
+  width: calc(50% - 40px);
+  margin: 15px 0;
+}
+
+.skill .skill-info {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+}
+
+.skill .skill-bar {
+  margin-top: 20px;
+  width: 100%;
+  height: 3px;
+  background-color: #bdc3c7;
+  position: relative;
+}
+
+.skill .skill-bar::before {
+  content: "";
+  height: 6px;
+  background-color: #48dbfb;
+  position: absolute;
+  bottom: 0;
+}
+
+.html:before {
+  width: 90%;
+}
+
+.css:before {
+  width: 70%;
+}
+
+.js:before {
+  width: 70%;
+}
+
+.react:before {
+  width: 30%;
+}
+
+@media screen and (max-width: 980px) {
+  .menu__toggler {
+    display: block;
+  }
+  .navbar-scroll .menu__toggler span {
+    background-color: black;
+  }
+  .navbar-scroll .navbar-menu {
+    background-color: #ecf0f1;
+  }
+
+  .menu__toggler.menu-toggler-x span:nth-child(1) {
+    transform: rotate(-45deg);
+  }
+  .menu__toggler.menu-toggler-x span:nth-child(2) {
+    opacity: 0;
+  }
+  .menu__toggler.menu-toggler-x span:nth-child(3) {
+    transform: rotate(45deg);
+    position: absolute;
+    top: 3px;
+  }
+  .navbar-menu {
+    position: fixed;
+    height: 100vh;
+    background-color: #34495e;
+    top: 0;
+    right: -130%;
+    min-width: 400px;
+    padding: 50px 80px;
+    transition: 0.3s linear;
+  }
+  .navbar-menu a {
+    display: block;
+    margin: 20px;
+    font-size: 30px;
+  }
+
+  .mobile-menu {
+    right: 0;
+  }
+
+  .about-content img {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .about-content .about-text {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .skills .skill {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .mobile-menu {
+    right: -40%;
+  }
+}
